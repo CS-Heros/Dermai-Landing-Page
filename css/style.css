@@ -36,6 +36,9 @@ body {
 li {
   list-style: none;
 }
+img{
+  aspect-ratio: auto !important;
+}
 .mainBanner .container {
   padding: 0 5vw;
 }
@@ -82,9 +85,10 @@ li {
 .mainBanner .content .desc .services {
   padding: 1rem;
 }
-.mainBanner .content .desc .services h5 {
+.mainBanner .content .desc .services h1.servTitle {
   color: var(--darkBlue);
   font-weight: 400;
+  font-size: 1.25rem;
 }
 .mainBanner .content .desc .services ul li {
   list-style: none;
@@ -485,7 +489,7 @@ footer span span {
 /* xl */
 @media (min-width: 1200px) {
   html{
-    overflow: hidden;
+    overflow-x: hidden;
   }
   .mainBanner .content .desc {
     margin-top: 5rem 0;
