@@ -52,9 +52,8 @@ li {
 }
 .top-logos ul li {
   display: inline-block;
-  margin: 1rem;
+  margin: .6rem;
 }
-
 /* Head */
 .mainBanner .head h1 {
   font-family: "Inconsolata", monospace;
@@ -116,15 +115,15 @@ li {
   box-shadow: none;
 }
 .mainBanner .content .desc .services .btns .btn.apk {
-  background: url("../img/android.png") center center no-repeat;
+  background: url("../img/android.webp") center center no-repeat;
   background-size: contain;
 }
 .mainBanner .content .desc .services .btns .btn.googlePlay {
-  background: url("../img/googlePlay.png") center center no-repeat;
+  background: url("../img/googlePlay.webp") center center no-repeat;
   background-size: contain;
 }
 .mainBanner .content .desc .services .btns .btn.appStore {
-  background: url("../img/appStore.png") center center no-repeat;
+  background: url("../img/appStore.webp") center center no-repeat;
   background-size: contain;
 }
 .mainBanner .content .desc .services .btns .btn:not(.btn.appStore):hover {
@@ -226,7 +225,7 @@ footer span span {
     height: 200px;
   }
   .mainBanner .dots.rotated {
-    top: 390px;
+    top: calc(390px + 3rem);
     left: 60%;
     transform: rotate(90deg);
   }
@@ -273,7 +272,7 @@ footer span span {
     height: 150px;
   }
   .mainBanner .dots.rotated {
-    top: 360px;
+    top: calc(360px + 3rem);
     left: unset;
     right: 15%;
     transform: rotate(90deg);
@@ -333,7 +332,7 @@ footer span span {
     height: 200px;
   }
   .mainBanner .dots.rotated {
-    top: 400px;
+    top: calc(400px + 3rem);
     left: unset;
     right: 15%;
     transform: rotate(90deg);
@@ -374,9 +373,22 @@ footer span span {
     height: 200px;
   }
   .mainBanner .dots.rotated {
-    top: 400px;
+    top:  calc(400px + 3rem);
     left: unset;
     right: 20%;
+  }
+}
+@media(max-width:575px){
+  footer.footer{
+    height: 6rem;
+  }
+  .top-logos ul li{
+    margin: .3rem;
+  }
+}
+@media(max-width:768px){
+.mainBanner .content .app{
+    margin: 3rem 0;
   }
 }
 /* md */
@@ -418,7 +430,7 @@ footer span span {
     height: 250px;
   }
   .mainBanner .dots.rotated {
-    top: 600px;
+    top:  calc(600px + 3rem);
     left: unset;
     right: 15%;
   }
