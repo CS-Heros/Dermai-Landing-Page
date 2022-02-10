@@ -1,0 +1,523 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+:root {
+  --darkBlue: #11285c;
+  --Blue: #316eed;
+  --Cold: #d6e8ee;
+  --White: #fff;
+  --Black: #000;
+  --glass-Black: rgba(0, 0, 0, 0.5);
+}
+body {
+  background-color: #fefefe !important;
+  font-family: "Poppins", sans-serif !important;
+}
+li {
+  list-style: none;
+}
+.mainBanner .container {
+  padding: 0 5vw;
+}
+/* Top Logos */
+.Ulogo {
+  height: 80px;
+  width: 80px;
+  border: 3px solid var(--Black);
+  border-radius: 50%;
+  background-color: var(--White);
+}
+.top-logos ul {
+  margin: 1rem 0;
+}
+.top-logos ul li {
+  display: inline-block;
+  margin: 0.5rem;
+}
+
+/* Head */
+.mainBanner .head h1 {
+  font-family: "Inconsolata", monospace;
+  color: var(--darkBlue);
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+}
+.mainBanner .head h1 span {
+  color: var(--Blue);
+  margin-left: 0.5rem;
+}
+.mainBanner .head p {
+  color: var(--darkBlue);
+  font-weight: 600;
+}
+/* Content */
+.mainBanner .content {
+  color: var(--White);
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+  justify-content: center;
+}
+/* Services */
+.mainBanner .content .desc .services {
+  padding: 1rem;
+}
+.mainBanner .content .desc .services h5 {
+  color: var(--darkBlue);
+  font-weight: 400;
+}
+.mainBanner .content .desc .services ul li {
+  list-style: none;
+  margin: 1rem;
+}
+.mainBanner .content .desc .services ul li span {
+  font-size: 0.8rem;
+  font-weight: 700 !important;
+  color: var(--darkBlue);
+}
+.mainBanner .content .desc .services ul li i {
+  margin-right: 0.8rem;
+  color: var(--Blue);
+  padding: 0.3rem;
+}
+/* Buttons */
+.mainBanner .content .desc .services .btns {
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+  gap: 0.3rem;
+}
+.mainBanner .content .desc .services .btns .btn {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: none;
+}
+.mainBanner .content .desc .services .btns .btn.apk {
+  background: url("../img/android.png") center center no-repeat;
+  background-size: contain;
+}
+.mainBanner .content .desc .services .btns .btn.googlePlay {
+  background: url("../img/googlePlay.png") center center no-repeat;
+  background-size: contain;
+}
+.mainBanner .content .desc .services .btns .btn.appStore {
+  background: url("../img/appStore.png") center center no-repeat;
+  background-size: contain;
+}
+.mainBanner .content .desc .services .btns .btn:not(.btn.appStore):hover {
+  opacity: 0.8;
+}
+/* App Image */
+.mainBanner .content .app {
+  text-align: center;
+}
+.mainBanner .content .app img {
+  width: 100%;
+  height: 100%;
+  background: url("../img/Cloud.svg") center center no-repeat;
+  background-size: contain;
+}
+.mainBanner .cloud {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+.mainBanner .cloud img {
+  width: 500px;
+  height: 500px;
+}
+/* Dots */
+.mainBanner .dots {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mainBanner .dots.rotated {
+  transform: rotate(90deg);
+  width: 70px;
+  height: 140px;
+}
+/* Footer */
+footer.footer {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  place-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 8rem;
+  background-color: var(--Cold);
+  margin: 0 auto;
+}
+footer .logoItem {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  align-items: center;
+  justify-items: center;
+}
+footer span {
+  color: var(--darkBlue);
+  font-weight: 700;
+}
+footer span span {
+  font-weight: 400;
+}
+/* Mobile Mode */
+@media (max-width: 320px) {
+  .head p {
+    font-size: 0.8rem;
+  }
+  .mainBanner .content .desc .services {
+    padding: 0;
+    margin-bottom: 5rem;
+  }
+  .mainBanner .content .desc .services ul li i {
+    margin: 0.2rem;
+    padding: 0;
+  }
+  .mainBanner .content .desc .services ul li span {
+    font-size: 0.8rem;
+  }
+  .Ulogo,
+  .Blogo {
+    height: 45px;
+    width: 45px;
+  }
+  .top-logos ul li:nth-child(2) {
+    margin-left: 0rem;
+  }
+  .mainBanner .content {
+    grid-template-columns: 100%;
+  }
+  .mainBanner .content .app img {
+    width: 100%;
+    height: 100%;
+  }
+  .mainBanner .dots img {
+    width: 50px;
+    height: 150px;
+  }
+  .mainBanner .cloud img {
+    width: 200px;
+    height: 200px;
+  }
+  .mainBanner .dots.rotated {
+    top: 390px;
+    left: 60%;
+    transform: rotate(90deg);
+  }
+  footer {
+    padding: 0.5rem;
+  }
+  footer .logoItem {
+    gap: 0.5rem;
+  }
+  footer span {
+    font-size: 0.4rem;
+  }
+}
+/* xs */
+@media (min-width: 321px) and (max-width: 424px) {
+  * {
+    font-size: 95%;
+  }
+  .mainBanner .content .desc .services {
+    padding: 0;
+    margin-bottom: 8rem;
+  }
+  .mainBanner .content .desc .services ul li i {
+    margin: 0.2rem;
+    padding: 0;
+  }
+  .mainBanner .content .desc .services ul li span {
+    font-size: 0.8rem;
+  }
+  .Ulogo,
+  .Blogo {
+    height: 45px;
+    width: 45px;
+  }
+  .mainBanner .content {
+    grid-template-columns: 100%;
+  }
+  .mainBanner .content .app img {
+    width: 80%;
+    height: 80%;
+  }
+  .mainBanner .dots img {
+    width: 50px;
+    height: 150px;
+  }
+  .mainBanner .dots.rotated {
+    top: 360px;
+    left: unset;
+    right: 15%;
+    transform: rotate(90deg);
+  }
+  footer {
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+  footer .logoItem {
+    gap: 0.3rem;
+  }
+  footer span {
+    font-size: 0.5rem;
+  }
+}
+@media (min-width: 425px) and (max-width: 575px) {
+  * {
+    font-size: 100%;
+  }
+  .mainBanner .content .desc .services {
+    padding: 0 1rem;
+    margin-bottom: 5rem;
+  }
+  .mainBanner .content .desc .services ul li i {
+    margin: 0.2rem;
+    padding: 0;
+  }
+  .mainBanner .content .desc .services ul li span {
+    font-size: 1rem;
+  }
+  .Ulogo,
+  .Blogo {
+    height: 45px;
+    width: 45px;
+  }
+  .mainBanner .content {
+    grid-template-columns: 100%;
+  }
+  footer.col-12 {
+    padding: 1rem;
+  }
+  footer .logoItem {
+    gap: 0.3rem;
+  }
+  footer span {
+    font-size: 0.6rem;
+  }
+  footer {
+    gap: 0.5rem;
+  }
+  .mainBanner .content .app img {
+    width: 80%;
+    height: 80%;
+  }
+  .mainBanner .dots img {
+    width: 70px;
+    height: 200px;
+  }
+  .mainBanner .dots.rotated {
+    top: 400px;
+    left: unset;
+    right: 15%;
+    transform: rotate(90deg);
+  }
+}
+/* sm */
+@media (min-width: 576px) and (max-width: 767px) {
+  .mainBanner .content {
+    grid-template-columns: 100%;
+  }
+  .mainBanner .content .desc .services {
+    padding: 0;
+    margin-bottom: 5rem;
+  }
+  .mainBanner .content .desc .services ul li span {
+    font-size: 1rem;
+  }
+  .Ulogo,
+  .Blogo {
+    width: 60px;
+    height: 60px;
+  }
+  footer {
+    padding: 1rem;
+  }
+  footer .logoItem {
+    gap: 0.3rem;
+  }
+  footer span {
+    font-size: 0.7rem;
+  }
+  .mainBanner .content .app img {
+    width: 60%;
+    height: 60%;
+  }
+  .mainBanner .dots img {
+    width: 70px;
+    height: 200px;
+  }
+  .mainBanner .dots.rotated {
+    top: 400px;
+    left: unset;
+    right: 20%;
+  }
+}
+/* md */
+@media (min-width: 768px) and (max-width: 991px) {
+  .mainBanner .content {
+    grid-template-columns: 100%;
+  }
+  .mainBanner .content .desc .services {
+    margin-bottom: 5rem;
+  }
+  .mainBanner .content .desc .services ul li span,
+  .mainBanner .content .desc .services ul li i {
+    font-size: 1.3rem;
+  }
+  .mainBanner .content .desc .services .btns {
+    margin-left: 5rem;
+    gap: 1rem;
+  }
+  .Ulogo,
+  .Blogo {
+    width: 80px;
+    height: 80px;
+  }
+  footer {
+    padding: 1rem;
+  }
+  footer .logoItem {
+    gap: 0.3rem;
+  }
+  footer span {
+    font-size: 1rem;
+  }
+  .mainBanner .content .app img {
+    width: 80%;
+    height: 80%;
+  }
+  .mainBanner .dots img {
+    width: 80px;
+    height: 250px;
+  }
+  .mainBanner .dots.rotated {
+    top: 600px;
+    left: unset;
+    right: 15%;
+  }
+}
+/* lg */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .mainBanner .content {
+    padding-bottom: 15rem;
+  }
+  .mainBanner .content .desc .services {
+    padding: 0;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .mainBanner .content .desc .services ul li i {
+    font-size: 1.3rem;
+    margin: 0.2rem;
+    padding: 0;
+  }
+  .mainBanner .content .desc .services ul li span {
+    font-size: 1.3rem;
+  }
+  .Ulogo,
+  .Blogo {
+    width: 80px;
+    height: 80px;
+  }
+  footer {
+    padding: 1rem;
+    position: absolute;
+  }
+  footer .logoItem {
+    gap: 0.3rem;
+  }
+  footer span {
+    font-size: 1rem;
+  }
+  .mainBanner .content .app img {
+    width: 100%;
+    height: 100%;
+  }
+  .mainBanner .dots img {
+    width: 80px;
+    height: 250px;
+  }
+  .mainBanner .dots.rotated {
+    top: 620px;
+    right: 5%;
+    left: unset;
+  }
+}
+/* xl */
+@media (min-width: 1200px) {
+  .mainBanner .content .desc {
+    margin-top: 5rem 0;
+  }
+  .mainBanner .content .desc .services {
+    padding: 0;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  .mainBanner .content .desc .services ul li i {
+    margin: 0.5rem;
+    padding: 0;
+    font-size: 1.5rem;
+  }
+  .mainBanner .content .desc .services ul li span {
+    font-size: 1.5rem;
+  }
+  .Ulogo,
+  .Blogo {
+    width: 80px;
+    height: 80px;
+  }
+  footer {
+    padding: 1rem;
+    position: absolute;
+    bottom: -10vh;
+  }
+  footer .logoItem {
+    gap: 0.3rem;
+  }
+  footer span {
+    font-size: 1rem;
+  }
+  footer span {
+    font-size: 1rem;
+  }
+  .mainBanner .content .app img {
+    width: 100%;
+    height: 100%;
+  }
+  .mainBanner .dots img {
+    width: 100px;
+    height: 300px;
+  }
+  .mainBanner .dots.rotated {
+    top: 620px;
+    right: 15%;
+    left: unset;
+  }
+}
