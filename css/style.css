@@ -36,7 +36,7 @@ body {
 li {
   list-style: none;
 }
-img{
+img {
   aspect-ratio: auto !important;
 }
 .mainBanner .container {
@@ -55,7 +55,7 @@ img{
 }
 .top-logos ul li {
   display: inline-block;
-  margin: .6rem;
+  margin: 0.6rem;
 }
 /* Head */
 .mainBanner .head h1 {
@@ -125,10 +125,12 @@ img{
 .mainBanner .content .desc .services .btns .btn.googlePlay {
   background: url("../img/googlePlay.webp") center center no-repeat;
   background-size: contain;
+  display: none;
 }
 .mainBanner .content .desc .services .btns .btn.appStore {
   background: url("../img/appStore.webp") center center no-repeat;
   background-size: contain;
+  display: none;
 }
 .mainBanner .content .desc .services .btns .btn:not(.btn.appStore):hover {
   opacity: 0.8;
@@ -377,21 +379,21 @@ footer span span {
     height: 200px;
   }
   .mainBanner .dots.rotated {
-    top:  calc(400px + 3rem);
+    top: calc(400px + 3rem);
     left: unset;
     right: 20%;
   }
 }
-@media(max-width:575px){
-  footer.footer{
+@media (max-width: 575px) {
+  footer.footer {
     height: 6rem;
   }
-  .top-logos ul li{
-    margin: .3rem;
+  .top-logos ul li {
+    margin: 0.3rem;
   }
 }
-@media(max-width:768px){
-.mainBanner .content .app{
+@media (max-width: 768px) {
+  .mainBanner .content .app {
     margin: 3rem 0;
   }
 }
@@ -434,7 +436,7 @@ footer span span {
     height: 250px;
   }
   .mainBanner .dots.rotated {
-    top:  calc(600px + 3rem);
+    top: calc(600px + 3rem);
     left: unset;
     right: 15%;
   }
@@ -488,7 +490,7 @@ footer span span {
 }
 /* xl */
 @media (min-width: 1200px) {
-  html{
+  html {
     overflow-x: hidden;
   }
   .mainBanner .content .desc {
